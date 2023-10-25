@@ -41,6 +41,11 @@ const User = sequelize.define("User", {
         type: DataTypes.STRING,
         allowNull: false,
     },
+
+    salt:{
+        type: DataTypes.JSON,
+        allowNull: false,
+    }
 });
 
 // Create the table if it doesn't exist

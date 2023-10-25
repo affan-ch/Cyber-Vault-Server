@@ -4,8 +4,8 @@
   "description": "Cyber Vault is a password manager in flutter, this project acts as backend server for it.",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "start": "node server.js"
   },
   "author": "Muhammad Affan Maqsood",
   "license": "GPL-3.0",
