@@ -19,15 +19,21 @@ const Account = sequelize.define("Account", {
         },
     },
 
+    accountDomain: {
+        type: DataTypes.STRING,
+        allowNull: true,
+    },
+
     firstName: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
     },
 
     lastName: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
     },
+
 
     email: {
         type: DataTypes.STRING,
@@ -51,10 +57,26 @@ const Account = sequelize.define("Account", {
         allowNull: true,
     },
 
-    cardCVV: {
-        type: DataTypes.STRING,
-        allowNull: false,
+    backupCodes: {
+        type: DataTypes.JSON,
+        allowNull: true,
     },
+
+    backupCodesUsed: {
+        type: DataTypes.JSON,
+        allowNull: true,
+    },
+
+    secretKey: {
+        type: DataTypes.STRING,
+        allowNull: true,
+    },
+
+    totpUrl: {
+        type: DataTypes.STRING,
+        allowNull: true,
+    },
+    
 
     note: {
         type: DataTypes.STRING,
