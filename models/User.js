@@ -3,10 +3,10 @@ import sequelize from "../utils/database.js";
 
 const User = sequelize.define("User", {
     id: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.UUID,
         allowNull: false,
         primaryKey: true,
-        autoIncrement: true,
+        defaultValue: DataTypes.UUIDV4,
     },
 
     firstName: {
