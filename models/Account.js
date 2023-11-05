@@ -52,6 +52,11 @@ const Account = sequelize.define("Account", {
         allowNull: true,
     },
 
+    password: {
+        type: DataTypes.STRING,
+        allowNull: true,
+    },
+
     phoneNumber: {
         type: DataTypes.STRING,
         allowNull: true,
