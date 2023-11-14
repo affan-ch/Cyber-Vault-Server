@@ -4,7 +4,8 @@ import bodyParser from "body-parser";
 // Import Routes
 import userRoutes from './routes/userRoutes.js';
 import creditCardRoutes from './routes/creditCardRoutes.js';
-import accountRoutes from './routes/accountRoutes.js'
+import accountRoutes from './routes/accountRoutes.js';
+import secureNoteRoutes from './routes/secureNoteRoutes.js';
 
 const app = express();
 
@@ -18,7 +19,7 @@ app.get("/", (req, res) => {
 app.use('/api', userRoutes);
 app.use('/api', creditCardRoutes);
 app.use('/api', accountRoutes);
-
+app.use('/api', secureNoteRoutes);
 
 
 app.listen(3000, () => {
