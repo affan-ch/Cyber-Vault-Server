@@ -19,6 +19,11 @@ const CreditCard = sequelize.define("CreditCard", {
         },
     },
 
+    cardTitle: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+
     cardHolderName: {
         type: DataTypes.STRING,
         allowNull: false,
