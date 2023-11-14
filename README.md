@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Welcome to the Cyber Vault Server, a robust solution for securely managing passwords, credit card details, personal information, Secure Notes and Documents. This server is built using Node.js and MySQL, providing a reliable backend for the Cyber Vault Flutter application.
+Welcome to the Cyber Vault Server, a robust solution for securely managing Login Accounts, Credit Card details, Personal Information, Secure Notes and Documents. This server is built using Node.js and MySQL, providing a reliable backend for the [Cyber Vault](https://github.com/affan-ch/Cyber-Vault) Flutter application.
 
 ## Features
 
@@ -14,10 +14,50 @@ Welcome to the Cyber Vault Server, a robust solution for securely managing passw
 
 ## Installation
 
-1. Clone this repository: `git clone https://github.com/your-repo/cyber-vault-server.git`
+1. Clone this repository: `git clone https://github.com/affan-ch/cyber-vault-server.git`
 2. Install Node.js and npm if not already installed.
 3. Install project dependencies: `npm install`
-4. Configure the MySQL database connection in `config.js`.
+4. Configure the MySQL database connection and other settings in `.env` file.
+
+  <details align="center">
+   <summary>Click to expand</summary>
+   <dl align="left"><dd><dl><dd><dl><dd><dl><dd>
+
+   ```env
+   # JWT Secret Key for Token Signing
+   JWT_SECRET=""
+
+   # Database Configuration
+   DB_HOST="localhost"
+   DB_DIALECT="mysql"
+   DB_PORT=3306
+   DB_NAME="cyber_vault"
+   DB_USERNAME="root"
+   DB_PASSWORD=""
+   ```
+
+   ### Variable Descriptions
+
+   - **JWT_SECRET:** This is the secret key used for signing JWT tokens.
+
+   - **DB_HOST:** The host address where your MySQL database is running. Change it if your database is hosted elsewhere.
+
+   - **DB_DIALECT:** The database dialect. In this case, it's set to "mysql."
+
+   - **DB_PORT:** The port on which your MySQL database is running. Change it if your database uses a different port.
+
+   - **DB_NAME:** The name of your MySQL database.
+
+   - **DB_USERNAME:** The username used to connect to the MySQL database. Change it if you have a different username.
+
+   - **DB_PASSWORD:** The password used to connect to the MySQL database. Replace it with your actual database password.
+
+   <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Symbols/Warning.png" alt="Warning" width="25" height="25" /> Make sure not to share or expose your `.env` file, especially sensitive information like secret keys and passwords. Consider adding it to your `.gitignore` file to prevent accidental commits.
+
+   </dd></dl></dd></dl></dd></dl></dd></dl>
+   </details>
+
+   
 5. Run the server: `npm start`
 
 ## Usage
@@ -26,23 +66,37 @@ Welcome to the Cyber Vault Server, a robust solution for securely managing passw
 
 ### API Endpoints
 
-- **POST /register**: Register a new user with a username and password.
-- **POST /login**: Log in with a registered user account.
-- **GET /passwords**: Retrieve stored passwords for the authenticated user.
-- **POST /passwords**: Create a new password entry.
-- **GET /creditcards**: Retrieve stored credit card details.
-- **POST /creditcards**: Create a new credit card entry.
-- **GET /personalinfo**: Retrieve stored personal information.
-- **POST /personalinfo**: Create a new personal information entry.
-- **GET /documents**: Retrieve stored documents.
-- **POST /documents**: Upload a new document.
-- **GET /notes**: Retrieve stored secure notes.
-- **POST /notes**: Create a new secure note.
-- **PUT /update-password**: Update a user's password.
+- **POST /addAccount**: Add a new account to the password manager.
+- **POST /getAccounts**: Retrieve a list of accounts associated with the user.
+- **POST /updateAccount**: Update an existing account's information.
+- **POST /deleteAccount**: Delete an account from the password manager.
 
+<!-- Empty line -->
+
+- **POST /addCreditCard**: Add a new credit card to the password manager.
+- **POST /getCreditCards**: Retrieve a list of credit cards associated with the user.
+- **POST /updateCreditCard**: Update an existing credit card's information.
+- **POST /deleteCreditCard**: Delete a credit card from the password manager.
+
+<!-- Empty line -->
+
+- **POST /addSecureNote**: Add a new secure note to the password manager.
+- **POST /getSecureNotes**: Retrieve a list of secure notes associated with the user.
+- **POST /updateSecureNote**: Update an existing secure note's information.
+- **POST /deleteSecureNote**: Delete a secure note from the password manager.
+
+<!-- Empty line -->
+
+- **POST /signup**: Create a new user account.
+- **POST /getSaltByEmail**: Retrieve the salt associated with a user's email.
+- **POST /login**: Authenticate a user and generate a token.
+- **POST /validateToken**: Validate the authenticity of a user token.
+
+  
 ## Database Schema
 
-The database schema is defined in the `schema.sql` file. You can import it into your MySQL database to create the necessary tables.
+The database schema is defined in the `models` folder, within the files `Account.js`, `SecureNote.js`, `CreditCard.js`, and `User.js`. Each file contains the entity schema for its respective entity. The schema is managed using the Sequelize package with the MySQL dialect.
+
 
 ## Security
 
