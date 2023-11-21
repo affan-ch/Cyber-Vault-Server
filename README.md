@@ -87,6 +87,13 @@ Welcome to the Cyber Vault Server, a robust solution for securely managing Login
 
 <!-- Empty line -->
 
+- **POST /addPersonalInfo**: Add a new personal info record to the password manager.
+- **POST /getPersonalInfos**: Retrieve a list of personal info records associated with the user.
+- **POST /updatePersonalInfo**: Update an existing personal info record.
+- **POST /deletePersonalInfo**: Delete a personal info from the password manager.
+
+<!-- Empty line -->
+
 - **POST /signup**: Create a new user account.
 - **POST /getSaltByEmail**: Retrieve the salt associated with a user's email.
 - **POST /login**: Authenticate a user and generate a token.
