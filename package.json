@@ -1,6 +1,6 @@
 {
   "name": "cyber-vault-server",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Cyber Vault is a password manager in flutter, this project acts as backend server for it.",
   "main": "server.js",
   "scripts": {

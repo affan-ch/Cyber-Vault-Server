@@ -12,6 +12,7 @@ async function addPersonalInfo(req, res) {
     const { token, ...body } = req.body;
 
     body.userId = user.id;
+    console.log(req.body);
 
     const reqBody = Object.entries(body).reduce((acc, [key, value]) => {
         if (value !== '') {

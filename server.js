@@ -13,9 +13,8 @@ const app = express();
 app.use(bodyParser.json());
 
 app.get("/", (req, res) => {
-    return res.send("Hello World");
+    return res.send("Cyber Vault Server is Running!");
 });
-
 
 app.use('/api', userRoutes);
 app.use('/api', creditCardRoutes);

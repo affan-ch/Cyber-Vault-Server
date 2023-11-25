@@ -19,6 +19,7 @@ const PersonalInfo = sequelize.define("PersonalInfo", {
         },
     },
 
+    // Name Info
     firstName: {
         type: DataTypes.STRING,
         allowNull: true,
@@ -34,16 +35,98 @@ const PersonalInfo = sequelize.define("PersonalInfo", {
         allowNull: true,
     },
 
+    fullName: {
+        type: DataTypes.STRING,
+        allowNull: true,
+    },
+
+    // Personal Info
+    gender: {
+        type: DataTypes.STRING,
+        allowNull: true,
+    },
+    
+    dateOfBirth: {
+        type: DataTypes.STRING,
+        allowNull: true,
+    },
+
+    cnic: {
+        type: DataTypes.STRING,
+        allowNull: true,
+    },
+
+    maritalStatus: {
+        type: DataTypes.STRING,
+        allowNull: true,
+    },
+
+    // Religion & Nationality
+    religion: {
+        type: DataTypes.STRING,
+        allowNull: true,
+    },
+
+    nationality: {
+        type: DataTypes.STRING,
+        allowNull: true,
+    },
+
+    // Education & Occupation
+    education: {
+        type: DataTypes.STRING,
+        allowNull: true,
+    }, 
+
+    occupation: {
+        type: DataTypes.STRING,
+        allowNull: true,
+    },
+
+    // Family Info
+    fatherName: {
+        type: DataTypes.STRING,
+        allowNull: true,
+    },
+
+    fatherCnic: {
+        type: DataTypes.STRING,
+        allowNull: true,
+    },
+
+    motherName: {
+        type: DataTypes.STRING,
+        allowNull: true,
+    },
+
+    motherCnic: {
+        type: DataTypes.STRING,
+        allowNull: true,
+    },
+
+    spouseName: {
+        type: DataTypes.STRING,
+        allowNull: true,
+    },
+
+    spouseCnic: {
+        type: DataTypes.STRING,
+        allowNull: true,
+    },
+
+
+    // Contact Info
     email: {
         type: DataTypes.STRING,
         allowNull: true,
     },
 
-    phone: {
+    phoneNumber: {
         type: DataTypes.STRING,
         allowNull: true,
     },
 
+    // Regional Info
     address: {
         type: DataTypes.STRING,
         allowNull: true,
@@ -59,7 +142,7 @@ const PersonalInfo = sequelize.define("PersonalInfo", {
         allowNull: true,
     },
 
-    zip: {
+    zipCode: {
         type: DataTypes.STRING,
         allowNull: true,
     },
@@ -69,34 +152,10 @@ const PersonalInfo = sequelize.define("PersonalInfo", {
         allowNull: true,
     },
 
-    gender: {
+    // Record Title
+    recordTitle: {
         type: DataTypes.STRING,
-        allowNull: true,
-    },
-    
-    dob: {
-        type: DataTypes.STRING,
-        allowNull: true,
-    },
-
-    cnic: {
-        type: DataTypes.STRING,
-        allowNull: true,
-    },
-
-    maritalStatus: {
-        type: DataTypes.STRING,
-        allowNull: true,
-    },
-
-    occupation: {
-        type: DataTypes.STRING,
-        allowNull: true,
-    },
-
-    education: {
-        type: DataTypes.STRING,
-        allowNull: true,
+        allowNull: false,
     },
 
 });
