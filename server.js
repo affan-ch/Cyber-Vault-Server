@@ -1,12 +1,12 @@
-import express from "express";
-import bodyParser from "body-parser";
+const express = require("express");
+const bodyParser = require("body-parser");
 
 // Import Routes
-import userRoutes from './routes/userRoutes.js';
-import creditCardRoutes from './routes/creditCardRoutes.js';
-import accountRoutes from './routes/accountRoutes.js';
-import secureNoteRoutes from './routes/secureNoteRoutes.js';
-import personalInfoRoutes from './routes/personalInfoRoutes.js';
+const userRoutes = require('./routes/userRoutes.js');
+const creditCardRoutes = require('./routes/creditCardRoutes.js');
+const accountRoutes = require('./routes/accountRoutes.js');
+const secureNoteRoutes = require('./routes/secureNoteRoutes.js');
+const personalInfoRoutes = require('./routes/personalInfoRoutes.js');
 
 const app = express();
 

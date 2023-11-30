@@ -1,6 +1,6 @@
-import User from '../models/User.js';
-import jwt from 'jsonwebtoken';
-import dotenv from 'dotenv';
+const User = require('../models/User.js');
+const jwt = require('jsonwebtoken');
+const dotenv = require('dotenv');
 dotenv.config();
 
 // Create a new user
@@ -115,4 +115,4 @@ async function decodeToken(req, res) {
 }
 
 
-export { createUser, getSaltByEmail, login, decodeToken };
+module.exports = { createUser, getSaltByEmail, login, decodeToken };

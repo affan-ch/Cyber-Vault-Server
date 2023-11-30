@@ -1,4 +1,4 @@
-import Account from '../models/Account.js';
+const Account = require('../models/Account.js');
 
 // Insert a new Account
 async function addAccount(req, res) {
@@ -117,4 +117,4 @@ async function deleteAccount(req, res){
     }
 }
 
-export { addAccount, getAccounts, updateAccount, deleteAccount }
+module.exports = { addAccount, getAccounts, updateAccount, deleteAccount }

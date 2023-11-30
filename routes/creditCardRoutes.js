@@ -1,9 +1,9 @@
-import express from 'express';
+const express = require('express');
 
 const router = express.Router();
 
-import {addCreditCard, getCreditCards, updateCreditCard, deleteCreditCard} from '../controllers/creditCardController.js';
-import validateToken from '../middlewares/validateToken.js';
+const {addCreditCard, getCreditCards, updateCreditCard, deleteCreditCard} = require('../controllers/creditCardController.js');
+const validateToken = require('../middlewares/validateToken.js');
 
 
 router.post('/addCreditCard', validateToken, addCreditCard);
@@ -16,5 +16,5 @@ router.post('/deleteCreditCard', validateToken, deleteCreditCard);
 
 
 
-export default router;
+module.exports = router;
 

@@ -1,4 +1,4 @@
-import SecureNote from '../models/SecureNote.js';
+const SecureNote = require('../models/SecureNote.js');
 
 
 // Insert a new Secure Note
@@ -127,5 +127,5 @@ async function deleteSecureNote(req, res) {
 
 
 
-export { addSecureNote, updateSecureNote, getSecureNotes, deleteSecureNote }
+module.exports = { addSecureNote, updateSecureNote, getSecureNotes, deleteSecureNote }
 

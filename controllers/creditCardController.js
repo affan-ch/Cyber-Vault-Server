@@ -1,4 +1,4 @@
-import CreditCard from '../models/CreditCard.js';
+const CreditCard = require('../models/CreditCard.js');
 
 
 // Insert a new credit card
@@ -128,5 +128,5 @@ async function deleteCreditCard(req, res) {
 
 
 
-export { addCreditCard, getCreditCards, updateCreditCard, deleteCreditCard }
+module.exports = { addCreditCard, getCreditCards, updateCreditCard, deleteCreditCard }
 

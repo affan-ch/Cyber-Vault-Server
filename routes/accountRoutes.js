@@ -1,9 +1,9 @@
-import express from 'express';
+const express = require('express');
 
 const router = express.Router();
 
-import { addAccount, getAccounts, updateAccount, deleteAccount } from '../controllers/accountController.js';
-import validateToken from '../middlewares/validateToken.js';
+const { addAccount, getAccounts, updateAccount, deleteAccount } = require('../controllers/accountController.js');
+const validateToken = require('../middlewares/validateToken.js');
 
 
 router.post('/addAccount', validateToken, addAccount);
@@ -14,4 +14,4 @@ router.post('/updateAccount', validateToken, updateAccount);
 
 router.post('/deleteAccount', validateToken, deleteAccount);
 
-export default router;
+module.exports = router;

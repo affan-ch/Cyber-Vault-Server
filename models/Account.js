@@ -1,6 +1,6 @@
-import { DataTypes } from "sequelize";
-import sequelize from "../utils/database.js";
-import User from "./User.js";
+const { DataTypes } = require("sequelize");
+const sequelize = require("../utils/database.js");
+const User = require("./User.js");
 
 const Account = sequelize.define("Account", {
     id: {
@@ -99,4 +99,4 @@ Account.belongsTo(User, {
 User.sync();
 Account.sync();
 
-export default Account;
+module.exports = Account;

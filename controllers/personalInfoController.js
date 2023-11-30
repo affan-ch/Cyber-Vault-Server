@@ -1,4 +1,4 @@
-import PersonalInfo from '../models/PersonalInfo.js';
+const PersonalInfo = require('../models/PersonalInfo.js');
 
 
 // Insert a new personal Info
@@ -129,5 +129,5 @@ async function deletePersonalInfo(req, res) {
 
 
 
-export { addPersonalInfo, getPersonalInfos, updatePersonalInfo, deletePersonalInfo }
+module.exports = { addPersonalInfo, getPersonalInfos, updatePersonalInfo, deletePersonalInfo }
 

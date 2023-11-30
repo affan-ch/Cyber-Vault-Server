@@ -1,9 +1,9 @@
-import express from 'express';
+const express = require('express');
 
 const router = express.Router();
 
-import {addPersonalInfo, getPersonalInfos, updatePersonalInfo, deletePersonalInfo} from '../controllers/personalInfoController.js';
-import validateToken from '../middlewares/validateToken.js';
+const {addPersonalInfo, getPersonalInfos, updatePersonalInfo, deletePersonalInfo} = require('../controllers/personalInfoController.js');
+const validateToken = require('../middlewares/validateToken.js');
 
 router.post('/addPersonalInfo', validateToken, addPersonalInfo);
 
@@ -13,4 +13,4 @@ router.post('/updatePersonalInfo', validateToken, updatePersonalInfo);
 
 router.post('/deletePersonalInfo', validateToken, deletePersonalInfo);
 
-export default router;
+module.exports = router;

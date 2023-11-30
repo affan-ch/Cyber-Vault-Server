@@ -1,5 +1,5 @@
-import { DataTypes } from "sequelize";
-import sequelize from "../utils/database.js";
+const { DataTypes } = require("sequelize");
+const sequelize = require("../utils/database.js");
 
 const User = sequelize.define("User", {
     id: {
@@ -51,4 +51,4 @@ const User = sequelize.define("User", {
 // Create the table if it doesn't exist
 User.sync();
 
-export default User;
+module.exports = User;

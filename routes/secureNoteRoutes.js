@@ -1,10 +1,9 @@
-import express from 'express';
+const express = require('express');
 
 const router = express.Router();
 
-import {addSecureNote, deleteSecureNote, updateSecureNote, getSecureNotes} from '../controllers/secureNoteController.js';
-import validateToken from '../middlewares/validateToken.js';
-
+const {addSecureNote, deleteSecureNote, updateSecureNote, getSecureNotes} = require('../controllers/secureNoteController.js');
+const validateToken = require('../middlewares/validateToken.js');
 
 router.post('/addSecureNote', validateToken, addSecureNote);
 
@@ -14,6 +13,4 @@ router.post('/updateSecureNote', validateToken, updateSecureNote);
 
 router.post('/deleteSecureNote', validateToken, deleteSecureNote);
 
-
-export default router;
-
+module.exports = router;

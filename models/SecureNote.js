@@ -1,6 +1,6 @@
-import sequelize from "../utils/database.js";
-import User from "./User.js";
-import { DataTypes } from "sequelize";
+const sequelize = require("../utils/database.js");
+const User = require("./User.js");
+const { DataTypes } = require("sequelize");
 
 const SecureNote = sequelize.define("SecureNote", {
     id: {
@@ -42,4 +42,4 @@ SecureNote.belongsTo(User, {
 User.sync();
 SecureNote.sync();
 
-export default SecureNote;
+module.exports = SecureNote;

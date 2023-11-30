@@ -1,6 +1,6 @@
-import { DataTypes } from "sequelize";
-import sequelize from "../utils/database.js";
-import User from "./User.js";
+const { DataTypes } = require("sequelize");
+const sequelize = require("../utils/database.js");
+const User = require("./User.js");
 
 const CreditCard = sequelize.define("CreditCard", {
     id: {
@@ -70,4 +70,4 @@ CreditCard.belongsTo(User, {
 User.sync();
 CreditCard.sync();
 
-export default CreditCard;
+module.exports = CreditCard;

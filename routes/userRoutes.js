@@ -1,7 +1,7 @@
-import express from 'express';
+const express = require('express');
 const router = express.Router();
-import {createUser, getSaltByEmail, login, decodeToken} from '../controllers/userController.js';
-import validateToken from '../middlewares/validateToken.js';
+const {createUser, getSaltByEmail, login, decodeToken} = require('../controllers/userController.js');
+const validateToken = require('../middlewares/validateToken.js');
 
 
 router.post('/signup', createUser);
@@ -12,6 +12,5 @@ router.post('/login', login);
 
 router.post('/validateToken', validateToken, decodeToken);
 
-
-export default router;
+module.exports = router;
 
